@@ -1,8 +1,8 @@
 // props 練習
-function Child({ data }) {
+function Child({ post }) {
     return <li>
-        <h3>{data.title}</h3>
-        <p>{data.body}</p>
+        <h3>{post.title}</h3>
+        <p>{post.body}</p>
     </li>
 };
 
@@ -31,7 +31,7 @@ function Example() {
         <div>
             <ul>
                 {posts.map((post) =>
-                    <Child key={post.id} data={post} />
+                    <Child key={post.id} post={post} />
                 )}
             </ul>
         </div>
